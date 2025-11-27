@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Quicksand:wght@300..700&display=swap');
+@import "tailwindcss";
+
+* {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
+@theme {
+  /* LIGHT MODE VALUES */
+  --color-primary: #8842DA;
+  --color-primary-dark: #6A28C3;
+
+  --color-indigo: #3780D6;
+  --color-indigo-light: #4C8FE2;
+
+  --color-accent: #C993EC;
+
+  --color-background: #FFFFFF;   /* Light background */
+  --color-card: #F5F5F5;         /* Light card */
+  --color-text: #0D0D0D;         /* Dark text */
+}
+
+/* DARK MODE OVERRIDES */
+:root.dark {
+  --color-background: #0D0D0D;
+  --color-card: #1A1A1A;
+  --color-text: #E4E4E7;
+}
+
+
+.glow {
+  box-shadow: 0 0 12px #7C3AED;
+}

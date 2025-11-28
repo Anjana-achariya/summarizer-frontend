@@ -1,6 +1,7 @@
 import React from 'react'
-import toggledark from '../assets/toggledark.png'
-import togglelight from '../assets/togglelight.png'
+import toggleDark from "../assets/toggledark.png";
+import toggleLight from "../assets/togglelight.png";
+
 
 const ThemeToggleBtn = ({ theme, setTheme }) => {
   return (
@@ -26,3 +27,4 @@ const ThemeToggleBtn = ({ theme, setTheme }) => {
 }
 
 export default ThemeToggleBtn
+

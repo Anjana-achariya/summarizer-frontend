@@ -27,6 +27,7 @@ export default function HeroSection() {
     const ext = file.name.split(".").pop().toLowerCase();
     const isPDF = ext === "pdf";
     const isAudio = ["mp3", "wav", "m4a", "aac", "ogg"].includes(ext);
+
     if (!isPDF && !isAudio) {
       alert("Please upload a PDF or Audio file.");
       return;
@@ -54,7 +55,7 @@ export default function HeroSection() {
         fd.append("url", youtubeUrl);
         fd.append("tone", "neutral");
 
-        const res = await API.post("/summarize/youtube", fd);
+        const res = await API.post("/summarize/youtube-audio", fd);
         setOutput(formatResult(res.data));
         return;
       }
@@ -139,7 +140,7 @@ export default function HeroSection() {
               type="text"
               value={youtubeUrl}
               onChange={(e) => setYoutubeUrl(e.target.value)}
-              placeholder="YouTube link"
+              placeholder="Paste YouTube link (auto audio download)"
               className="w-full bg-background border border-primary text-text py-3 px-3 rounded-lg focus:outline-none"
             />
 
